@@ -49,9 +49,9 @@ class UserApi(generics.GenericAPIView):
 #Main API
 from django.http import HttpResponse
 def MainView(request):
-    html = "<html><body><center><a href='/api/post/'>Main API</a> (/api/post/)   <br><br>" \
-           "<a href='/api/login/'>Login API</a>  (/api/login/) <br><br>" \
-           "<a href='api/register/'> Register API </a> (api/register/) <br><br>" \
-           "<a href='api/token/refresh/'> Token Refresh</a> (api/token/refresh/) <br><br></center> </body></html>"
+    html = "<html><body><a href='/api/login/'>Login API</a>  (/api/login/) <br>" \
+           "<a href='api/register/'> Register API </a> (api/register/) <br>" \
+           "<a href='/api/post/'>Main API</a> (/api/post/)   <br>" \
+           "<a href='api/token/refresh/'> Token Refresh</a> (api/token/refresh/) <br> </body></html>"
     return HttpResponse(html)
 

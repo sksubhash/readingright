@@ -9,15 +9,11 @@ Django==3.0.6
 django-filter==2.4.0
 djangorestframework==3.12.2
 djangorestframework-simplejwt==4.6.0
-face-recognition-models==0.3.0
 filelock==3.0.12
-googlevoice==3.0.0
 idna==2.10
 Markdown==3.3.3
 mysqlclient @ file:///D:/DriveC/PycharmProjects/readingright3/mysqlclient-1.4.6-cp38-cp38-win32.whl
 numpy==1.19.1
-opencv-contrib-python==4.4.0.42
-opencv-python==4.3.0.36
 Pillow==7.2.0
 pipenv==2020.11.15
 PyJWT==2.0.1
