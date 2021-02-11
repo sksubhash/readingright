@@ -1,4 +1,5 @@
 from rest_framework import generics, permissions, mixins
+from rest_framework.views import APIView
 from rest_framework.response import Response
 from . import serializers
 from .serializers import RegisterSerializer, UserSerializer
@@ -37,9 +38,20 @@ class PostApi(generics.GenericAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+#User API
 class UserApi(generics.GenericAPIView):
     def get(self, request):
         restaurants = User.objects.all()
         serializer = serializers.UserSerializer(restaurants, many=True)
         return Response(serializer.data)
+
+
+#Main API
+from django.http import HttpResponse
+def MainView(request):
+    html = "<html><body><center><a href='/api/post/'>Main API</a> (/api/post/)   <br><br>" \
+           "<a href='/api/login/'>Login API</a>  (/api/login/) <br><br>" \
+           "<a href='api/register/'> Register API </a> (api/register/) <br><br>" \
+           "<a href='api/token/refresh/'> Token Refresh</a> (api/token/refresh/) <br><br></center> </body></html>"
+    return HttpResponse(html)
 

@@ -36,4 +36,4 @@ class PostSerializer(serializers.ModelSerializer):
     # deserialize and serialize
     class Meta:
         model = models.Post
-        fields = ['id', 'userId', 'title', 'body']
+        fields = ['userId', 'id', 'title', 'body']
